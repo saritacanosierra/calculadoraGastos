@@ -113,10 +113,13 @@ button:hover {
 
 .gasto-item {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
-  gap: 20px;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr  ;
+  gap: 2px;
   padding: 15px;
   border-bottom: 1px solid #eee;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos para la tabla de resultados */
@@ -212,4 +215,15 @@ button:hover {
   .boton-agregar-gasto {
     width: 80%;
   }
+}
+.gasto-acciones{
+  display: flex;
+  flex-direction: row;
+}
+.btn-editar, .btn-eliminar{
+  margin-right: 5%;
+  padding: 2px;
+  margin-left: 2%;
+  margin-top: 1%;
+
 }
