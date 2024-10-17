@@ -1,14 +1,26 @@
 .historial-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
 }
 
-.historial-title {
-  color: #333;
-  margin-bottom: 20px;
+.historial-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.historial_title {
+  color: #ffffff;
+  padding: 0.5%;
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+  width: 75%;
+  margin: 0% auto 2%;
 }
 
 .historial-filter {
@@ -28,6 +40,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
+  margin: 0 auto; /* Centra la tabla horizontalmente */
 }
 
 .historial-th {
@@ -49,4 +62,13 @@
 
 .historial-tr-odd {
   background-color: #ffffff;
+}
+
+.historial-footer {
+  flex-shrink: 0;
+  width: 100% !important;
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  font-size: 1.2em;
+  text-align: center;
 }

@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import './form.css'
+import Footer from '../components/footer';
 
 function FormularioVista() {
   const [gastos, setGastos] = useState([]);
   const [nuevoGasto, setNuevoGasto] = useState({
     fecha: '',
     descripcion: '',
-    valor: ''
+    valor: '',
+    categoria: '' // Agregamos la categoría al estado del nuevo gasto
   });
   const [ingresosMensuales, setIngresosMensuales] = useState('');
   const [nombreUsuario, setNombreUsuario] = useState('');
@@ -38,11 +40,12 @@ function FormularioVista() {
   const agregarGasto = () => {
     if (nuevoGasto.fecha && nuevoGasto.descripcion && nuevoGasto.valor) {
       setGastos(prevGastos => [...prevGastos, nuevoGasto]);
-      setNuevoGasto({ fecha: '', descripcion: '', valor: '' });
+      setNuevoGasto({ fecha: '', descripcion: '', valor: '', categoria: '' });
     }
   };
 
   return (
+    <>
     <div className="container">
       <header className="title">
         <h1>{nombreUsuario ? `Usuario: ${nombreUsuario}` : 'Usuario:'}</h1>
@@ -128,6 +131,25 @@ function FormularioVista() {
                 required
               />
             </div>
+            <div className="input-grupo">
+              <label htmlFor="categoria-gasto">Categoría:</label>
+              <select
+                id="categoria-gasto"
+                name="categoria"
+                value={nuevoGasto.categoria}
+                onChange={handleGastoChange}
+                required
+              >
+                <option value="">Seleccione una categoría</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="transporte">Transporte</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="entretenimiento">Entretenimiento</option>
+                <option value="salud">Salud</option>
+                <option value="educacion">Educación</option>
+                <option value="otros">Otros</option>
+              </select>
+            </div>
             <button className='btnAgregarGasto' type="button" onClick={agregarGasto}>Agregar Gasto</button>
           </div>
 
@@ -137,6 +159,7 @@ function FormularioVista() {
                 <span>{gasto.fecha}</span>
                 <span>{gasto.descripcion}</span>
                 <span>{gasto.valor}</span>
+                <span>{gasto.categoria}</span> 
               </div>
             ))}
           </div>
@@ -168,6 +191,8 @@ function FormularioVista() {
         </section>
       </main>
     </div>
+      <Footer className='form_footer' />
+    </>
   );
 }
 
