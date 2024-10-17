@@ -50,7 +50,7 @@ function FormularioVista() {
 
       <main className="container-form">
         <section className="datos-personales">
-          <h2>INGRESE SUS DATOS</h2>
+          <h2>Ingrese sus datos</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="nombres">Nombres:</label>

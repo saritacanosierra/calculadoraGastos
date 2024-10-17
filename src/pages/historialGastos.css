@@ -11,9 +11,19 @@
   margin-bottom: 20px;
 }
 
+.historial-filter {
+  width: 80%;
+  max-width: 50%;
+  margin-bottom: 3%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .historial-table {
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   max-width: 800px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -40,4 +50,3 @@
 .historial-tr-odd {
   background-color: #ffffff;
 }
-

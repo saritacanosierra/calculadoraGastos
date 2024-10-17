@@ -1,15 +1,33 @@
-
+import  { useState } from 'react';
 import './historialGastos.css';
 
 function Historial() {
+  const [filtro, setFiltro] = useState('');
+  
   const meses = [
     'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
     'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
   ];
 
+  // Función para filtrar las filas
+  const filasFiltradas = meses.filter(mes =>
+    mes.toLowerCase().includes(filtro.toLowerCase()) ||
+    '0'.includes(filtro) // Esto filtrará por los valores de ingresos, gastos y ahorro
+  );
+
   return (
     <div className="historial-container">
       <h1 className="historial-title">Historial</h1>
+      
+      {/* Campo de búsqueda */}
+      <input
+        type="text"
+        placeholder="Filtrar..."
+        value={filtro}
+        onChange={(e) => setFiltro(e.target.value)}
+        className="historial-filter"
+      />
+
       <table className="historial-table">
         <thead>
           <tr>
@@ -20,7 +38,7 @@ function Historial() {
           </tr>
         </thead>
         <tbody>
-          {meses.map((mes, index) => (
+          {filasFiltradas.map((mes, index) => (
             <tr key={mes} className={index % 2 === 0 ? 'historial-tr-even' : 'historial-tr-odd'}>
               <td className="historial-td">{mes}</td>
               <td className="historial-td">0</td>
