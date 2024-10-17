@@ -1,0 +1,43 @@
+.historial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.historial-title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.historial-table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.historial-th {
+  background-color: #3498db;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.historial-td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.historial-tr-even {
+  background-color: #f2f2f2;
+}
+
+.historial-tr-odd {
+  background-color: #ffffff;
+}
+
