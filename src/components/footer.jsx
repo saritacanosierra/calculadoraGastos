@@ -19,7 +19,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-section">
-            <h4>Nombres</h4>
+            <h4>Nombre</h4>
             <p>SaraCristina Cano Sierra</p>
           </div>
         </div>
