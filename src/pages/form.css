@@ -146,7 +146,7 @@ button:hover {
   background-color: #f2f2f2;
 }
 .btnAgregarGasto,
-.btnEnviar {
+.btnEnviar, .btnAgregarIngreso {
   margin-top: 1%;
   display: block;
   width: 50%;
@@ -226,4 +226,35 @@ button:hover {
   margin-left: 2%;
   margin-top: 1%;
 
+}
+
+.ingresos {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0.25% 0.625% rgba(0,0,0,0.1);
+}
+
+.lista-ingresos {
+  margin: 20px 0;
+  border: 1px solid none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.ingreso-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ingreso-item:last-child {
+  border-bottom: none;
+}
+
+.ingreso-acciones {
+  display: flex;
+  gap: 10px;
 }

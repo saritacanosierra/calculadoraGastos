@@ -1,0 +1,38 @@
+.tutulo_progressbar{display: flex;
+    color: white;
+    justify-content: center;
+}
+.burbuja-flotante {
+    position: fixed; 
+    top: 70%;
+    right: 20px;
+    z-index: 1000;
+    width: 150px;
+    height: 150px;
+    font-style: none;
+}
+
+.circular-progress {
+   background-color: rgb(180, 129, 28); /* Color de fondo */
+   border-radius: 50%; /* Hacerlo circular */
+   position: relative; /* Para posicionar elementos internos */
+}
+
+.circular-progress .path {
+    stroke: green; /* Color del progreso */
+    stroke-width: 10; /* Ancho de la línea de progreso */
+}
+
+.circular-progress .text {
+    fill: rgb(0, 0, 0); /* Color del texto */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita para mayor visibilidad */
+}
+
+.circular-progress .trail {
+    stroke: rgb(171, 48, 48); /* Color de la parte no ahorrada */
+    stroke-width: 10; /* Ancho de la línea de la parte no ahorrada */
+}
+.CircularProgressbar .CircularProgressbar-path {
+   stroke: rgb(186, 55, 55); /* Color de la barra de progreso */
+}
