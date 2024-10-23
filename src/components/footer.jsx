@@ -21,6 +21,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Nombre</h4>
             <p>SaraCristina Cano Sierra</p>
+            <p>Cesar Ríos</p>
+            <p>Gloria Elena López Tabares</p>
+            <p>Johan Camilo Valencia</p>
+            <p>Diego Grisales</p>
           </div>
         </div>
         <div className="footer-bottom">
