@@ -5,17 +5,19 @@
 .burbuja-flotante {
     position: fixed; 
     top: 70%;
-    right: 20px;
+    right: 5%; 
     z-index: 1000;
-    width: 150px;
-    height: 150px;
+    width: 80%; 
+    max-width: 150px;
+    height: auto; 
     font-style: none;
+    margin-bottom: 20%;
 }
 
 .circular-progress {
    background-color: rgb(180, 129, 28); /* Color de fondo */
-   border-radius: 50%; /* Hacerlo circular */
-   position: relative; /* Para posicionar elementos internos */
+   border-radius: 50%; 
+   position: relative; 
 }
 
 .circular-progress .path {
